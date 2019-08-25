@@ -1,4 +1,3 @@
-# abap_bapi_bo_class_generator
 # ABAP BAPI Business Object Class Generator
 
 This is a SAP Executable program to generate Business Object ABAP class based on the BAPIs of a SAP Business Object.
