@@ -20,5 +20,5 @@ https://blogs.sap.com/2019/08/27/abap-bapi-bo-class-generator/
 - Generate class interface functionality added. See selection screen check box field "Generate class interface".
 - Selection screen better aranged.
 - NON-cru BAPIs added. (CRU = Create, Read, Update)
-- Improved code generation. In create method first the importing parameter is copied to a local variable to overcome a dump if BAPI wants to change the parameter.
+- Improved code generation. In create method first the importing parameter is copied to a local variable to overcome a dump if BAPI wants to change the parameter. Method contained an unused local deep structure variable if no exporting were available except the return variable. De return variable are handled by separate local variables.
 - Refactoring the tool code.
