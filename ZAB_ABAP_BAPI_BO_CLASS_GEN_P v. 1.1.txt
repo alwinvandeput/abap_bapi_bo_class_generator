@@ -12236,7 +12236,7 @@
           exit_program( ).
 
         WHEN OTHERS.
-* ง5. Call dispatch to process toolbar functions
+* ยง5. Call dispatch to process toolbar functions
 * Toolbar events are registered in constructur method of
 * CL_ALV_TREE_BASE as application events. So the dispatch call
 * is a must if you want to use the standard toolbar.
@@ -12345,12 +12345,12 @@
 
 *-----------------------------------------------------------------------
     METHOD register_events.
-*ง4. Event registration: tell ALV Tree which events shall be passed
+*ยง4. Event registration: tell ALV Tree which events shall be passed
 *    from frontend to backend.
       DATA: lt_events TYPE cntl_simple_events,
             l_event   TYPE cntl_simple_event.
 
-*ง4a. Frontend registration(i):  get already registered tree events.
+*ยง4a. Frontend registration(i):  get already registered tree events.
 *................................................................
 * The following four tree events registers ALV Tree in the constructor
 * method itself.
@@ -12375,11 +12375,11 @@
 * (If you do not these events will be deregistered!!!).
 * You do not have to register events of the toolbar again.
 
-*ง4b. Frontend registration(ii): add additional event ids
+*ยง4b. Frontend registration(ii): add additional event ids
       l_event-eventid = cl_gui_column_tree=>eventid_node_double_click.
       APPEND l_event TO lt_events.
 
-*ง4c. Frontend registration(iii):provide new event table to alv tree
+*ยง4c. Frontend registration(iii):provide new event table to alv tree
       CALL METHOD gr_alv_tree->set_registered_events
         EXPORTING
           events                    = lt_events
@@ -12391,7 +12391,7 @@
         MESSAGE x208(00) WITH 'ERROR'.                      "#EC NOTEXT
       ENDIF.
 *--------------------
-*ง4d. Register events on backend (ABAP Objects event handling)
+*ยง4d. Register events on backend (ABAP Objects event handling)
       SET HANDLER on_node_double_click
         FOR gr_alv_tree.
 
